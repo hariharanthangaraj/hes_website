@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Local mart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            margin: 0%;
+            background-color: #E8ECE7;
+        }
+
+        #logoheader {
+            width: auto;
+            height: auto;
+            background-color: #E8ECE7;
+            display: flex;
+            flex-direction: row;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+            column-gap: 2px;
+            justify-content: space-between;
+        }
+
+        #login_card {
+
+            padding: 10px;
+            margin: 5px;
+            margin-top: 20px;
+
+            display: flex;
+
+            
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+            align-items: center;
+            height: fit-content;
+
+        }
+
+        #hero {
+
+            padding: 20px;
+            margin: 5px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+            height: fit-content;
+
+        }
+
+        #about {
+
+            padding: 20px;
+            margin: 5px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+
+        }
+
+        #service {
+            margin: 5px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+            padding: 40px;
+        }
+
+       
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            width: 45px;
+            height: 45px;
+
+            border-radius: 10px;
+
+            background-color: #E8ECE7;
+
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #D4AF37;
+        }
+
+        .service-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #153358;
+        }
+
+        .service-explain {
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            display: block;
+            margin-left: 90px;
+            font-weight: 600;
+            color: #153358;
+        }
+
+
+        #whyus {
+
+            padding: 20px;
+            margin: 20px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+        }
+
+        #approach {
+
+            padding: 20px;
+            margin: 20px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+        }
+        #contactus {
+
+            padding: 20px;
+            margin: 20px;
+            margin-top: 20px;
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+        }
+
+        .contactbtn {
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+            align-items: center;
+            width: fit-content;
+            display: flex;
+
+            background-color: #153358;
+            color: white;
+        }
+        hr{
+            border-color: white;
+            height: 5px;
+            border-radius: 10px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+        }
+        footer{
+
+            
+           
+
+            display: flex;
+
+
+            color: #0B2038;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow:
+                5px 5px 10px #cdd1cf,
+                -5px -5px 10px #ffffff;
+
+            height: fit-content;
+        }
+        .contactbtn:hover {
+            box-shadow:
+                inset 4px 4px 8px #0B2038,
+                inset -4px -4px 8px #1D4670;
+        }
+
+        #login_card:hover {
+            box-shadow: 0 5px 10px #cdd1cf, 5px 0 10px #cdd1cf, inset 0 5px 10px #ffffff, 5px 0 10px #cdd1cf;
+        }
+
+        .header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+
+            font-weight: bolder;
+            font-style: oblique;
+        }
+
+        .wel {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            padding-top: 30px;
+        }
+
+        #logo {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #locator {
+
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .login_form {
+            padding: 40px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #body {
+            margin-left: 10px;
+        }
+        .location-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #0d2b45;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.location-btn:hover {
+    transform: translateY(-2px);
+}
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="logoheader">
+        <img src="Gemini_Generated_Image_3aer0a3aer0a3aer-removebg-preview.png" id="logo" alt="">
+        <div id="locator">
+            <div  id="login_card"><a href="#hero" style="text-decoration: none;color: #0B2038;">Home</a></div>
+            <div id="login_card"><a href="#about"style="text-decoration: none;color: #0B2038;">About</a></div>
+            <div id="login_card"><a href="#service" style="text-decoration: none;color: #0B2038;">Service</a></div>
+            <div id="login_card"><a href="#contactus"style="text-decoration: none;color: #0B2038;">Contact</a></div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="hero">
+            <h1 style="font-family:Arial, Helvetica, sans-serif; color:#D4AF37 ; font-size: 18px;">HANUS ENGINEERING
+                SOLUTIONS SDN BHD</h1>
+            <h1 style=" display:inline; font-family: Arial, Helvetica, sans-serif; color: #0B2038; font-size: 50px;">
+                Engineering Solutions.Service. <h1
+                    style=" display:inline;color: #D4AF37; font-size: 50px; font-family: Arial, Helvetica, sans-serif; ">
+                    Precision.</h1>
+            </h1>
+            <p
+                style="color: #153358; font-style: normal; font-weight: 900; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
+                Reliable engineering and industrial solutions
+
+                for repair, refurbishment, coating, machining
+                and fabrication.</p>
+            <div class="contactbtn">Contact Us</div>
+
+        </div>
+        <div id="about">
+            <h1 style="font-weight: 900;">ABOUT US</h1>
+            <h3 style="font-weight: 700;">Engineering Expertise You Can Rely On</h3>
+            <p>Hanus Engineering Solutions Sdn Bhd provides engineering and industrial service solutions focused on
+                quality workmanship, precision and reliable results.</p>
+            <p>We support industrial requirements through general engineering works, industrial coating, mechanical seal
+                refurbishment, pump servicing, metal spray, precision machining, fabrication and balancing services.</p>
+            <p>Our goal is simple: deliver practical engineering solutions that help keep your equipment performing
+                reliably.</p>
+        </div>
+    </div>
+    <div id="service">
+        <h1 >Services</h1>
+        <h3 >Our Engineering Services</h3>
+        <div class="service-item">
+            <span class="service-number">01</span>
+            <span class="service-name">General Engineering Works</span>
+        </div>
+        <div class="service-item">
+            <span class="service-number">02</span>
+            <span class="service-name">Industrial Coating Works</span>
+        </div>
+
+        <div class="service-item">
+            <span class="service-number">03</span>
+            <span class="service-name">Mechanical Seal Refurbishment</span>
+        </div>
+
+        <div class="service-item">
+            <span class="service-number">04</span>
+            <span class="service-name">Pump Servicing & Refurbishment</span>
+        </div>
+
+        <div class="service-item">
+            <span class="service-number">05</span>
+            <span class="service-name">Metal Spray, Precision Machining & Fabrication</span>
+        </div>
+
+        <div class="service-item">
+            <span class="service-number">06</span>
+            <span class="service-name">Balancing Machine Services</span>
+        </div>
+    </div>
+    <div id="whyus">
+        <h1>WHY US ?</h1>
+        <h1 style="margin: 0%; ">Built on Precision & Reliability</h1>
+        <h2 style="margin: 0% ; margin-left: 20px;">Precision</h2>
+        <p style="margin: 0%; margin-left: 40px;">Attention to accuracy, workmanship and engineering requirements.</p>
+        <h2 style="margin: 0% ; margin-left: 20px;">Reliability</h2>
+        <p style="margin: 0%; margin-left: 40px;">Dependable service focused on long-term equipment performance.</p>
+        <h2 style="margin: 0% ; margin-left: 20px;">Quality Workmanship</h2>
+        <p style="margin: 0%; margin-left: 40px;">Professional handling of engineering, repair and refurbishment work.
+        </p>
+        <h2 style="margin: 0% ; margin-left: 20px;">Practical Solutions</h2>
+        <p style="margin: 0%; margin-left: 40px;">Solutions developed around real industrial requirements.</p>
+
+    </div>
+    <div id="approach">
+        <h1>Our Approach</h1>
+        <h2>From Requirement to Reliable Solution</h2>
+        <div class="service-item">
+            <span class="service-number">01</span>
+            <span class="service-name">Understand</span>
+        </div>
+        <div class="service-explain">We understand your equipment, component and service requirements.</div>
+
+        <div class="service-item">
+            <span class="service-number">02</span>
+            <span class="service-name">Assess</span>
+        </div>
+        <div class="service-explain">We inspect the condition and identify the appropriate engineering solution.</div>
+
+        <div class="service-item">
+            <span class="service-number">03</span>
+            <span class="service-name">Restore</span>
+        </div>
+        <div class="service-explain">We carry out the required repair, refurbishment, machining, coating or fabrication
+            work</div>
+
+        <div class="service-item">
+            <span class="service-number">04</span>
+            <span class="service-name">Deliver</span>
+        </div>
+        <div class="service-explain">We aim to deliver reliable results that meet the required application and
+            specifications.</div>
+
+    </div>
+    <div id="contactus">
+        <h1>Contact</h1>
+        <h2>Let's Discuss Your Engineering Requirement</h2>
+        <h5>Need pump servicing, mechanical seal refurbishment, industrial coating, machining, fabrication or other
+            engineering support?</h5>
+        <h5>Get in touch with Hanus Engineering Solutions Sdn Bhd.</h5>
+        <h2>Contact Details</h2>
+        <h3>Phone :
+        </h3>
+        <a href="tel:+60 1159321688">+60 11-59321688</a>
+        <h3>Email US :</h3>
+<a href="mailto:hanussales@gmail.com">hanussales@gmail.com</a>
+<h3>Location :</h3>
+<div class="location">
+    <h2>Our Location</h2>
+
+    <p>
+        📍 28, Jalan Sungai Rasau 34,<br>
+        Kawasan Perindustrian Sungai Rasau,<br>
+        41300 Klang, Selangor, Malaysia
+    </p>
+
+    <a
+        href="https://www.google.com/maps/place/28,+Jalan+Sungai+Rasau+34,+Kawasan+Perindustrian+Sungai+Rasau,+41300+Klang,+Selangor,+Malaysia"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="location-btn"
+    >
+        Get Directions →
+    </a>
+    </div>
+    </div>
+    <footer><h5>© 2026 Hanus Engineering Solutions Sdn Bhd. All Rights Reserved.</h5></footer>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
