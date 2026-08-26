@@ -1,347 +1,4313 @@
-<!DOCTYPE html> <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Local mart</title>
-    <meta name="description" content="">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+
+    <title>HES | Hanus Engineering Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
-        body {
-            margin: 0%;
-            background-color: #E8ECE7;
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #021a13;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
         #logoheader {
-            width: auto;
+
+            display: flex;
+
+            top: 15px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: calc(100% - 60px);
+            max-width: 1400px;
+
             height: auto;
-            background-color: #E8ECE7;
-            display: flex;
-            flex-direction: row;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            column-gap: 2px;
+
+            padding: 5px;
+
+            margin-top: 20px;
+            margin-left: 20px;
+
             justify-content: space-between;
-        }
-
-        #login_card {
-            padding: 10px;
-            margin: 5px;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
             align-items: center;
-            height: fit-content;
+
+            background-color: #021a13;
+
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+
+            border-radius: 20px;
+
+            position: relative;
+
+            z-index: 100;
         }
 
-        #hero {
-            padding: 20px;
-            margin: 5px;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
 
-        #about {
-            padding: 20px;
-            margin: 5px;
-            margin-top: 20px;
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
-
-        #service {
-            margin: 5px;
-            margin-top: 20px;
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-            padding: 40px;
-        }
-
-        .service-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .service-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            background-color: #E8ECE7;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: #D4AF37;
-        }
-
-        .service-name {
-            font-family: 'Poppins', sans-serif;
-            font-size: 19px;
-            font-weight: 600;
-            color: #153358;
-        }
-
-        .service-explain {
-            font-family: 'Poppins', sans-serif;
-            font-size: 19px;
-            display: block;
-            margin-left: 90px;
-            font-weight: 600;
-            color: #153358;
-        }
-
-        #whyus {
-            padding: 20px;
-            margin: 20px;
-            margin-top: 20px;
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
-
-        #approach {
-            padding: 20px;
-            margin: 20px;
-            margin-top: 20px;
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
-
-        #contactus {
-            padding: 20px;
-            margin: 20px;
-            margin-top: 20px;
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
-
-        .contactbtn {
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            align-items: center;
-            width: fit-content;
-            display: flex;
-            background-color: #153358;
-            color: white;
-        }
-
-        hr {
-            border-color: white;
-            height: 5px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-        }
-
-        footer {
-            display: flex;
-            color: #0B2038;
-            flex-direction: column;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px #cdd1cf, -5px -5px 10px #ffffff;
-            height: fit-content;
-        }
-
-        .contactbtn:hover {
-            box-shadow: inset 4px 4px 8px #0B2038, inset -4px -4px 8px #1D4670;
-        }
-
-        #login_card:hover {
-            box-shadow: 0 5px 10px #cdd1cf, 5px 0 10px #cdd1cf, inset 0 5px 10px #ffffff, 5px 0 10px #cdd1cf;
-        }
-
-        .header {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 30px;
-            font-weight: bolder;
-            font-style: oblique;
-        }
-
-        .wel {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 20px;
-            padding-top: 30px;
-        }
+        /* =====================================================
+           LOGO
+        ===================================================== */
 
         #logo {
-            width: 80px;
-            height: 80px;
             display: flex;
-            flex-direction: column;
         }
 
-        #locator {
-            display: flex;
-            flex-direction: row;
+        #logo img {
+
+            width: 60px;
+            height: 60px;
+
+            object-fit: contain;
+
+            background-color: #021a13;
+
+            z-index: -1;
         }
 
-        .login_form {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
 
-        #body {
-            margin-left: 10px;
-        }
+        /* =====================================================
+           MENU BUTTON
+        ===================================================== */
 
-        .location-btn {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0d2b45;
+        #menubtn {
+
+            display: none;
+
+            padding: 10px 15px;
+
+            border: 1px solid #D4A72C;
+
+            background-color: #06ad00;
+
             color: white;
-            text-decoration: none;
+
+            font-size: 22px;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
             transition: 0.3s;
         }
 
-        .location-btn:hover {
-            transform: translateY(-2px);
+        #menubtn:hover {
+
+            background-color: #078f00;
+
+            box-shadow:
+                0 0 15px #D4A72C;
         }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        #navigator {
+
+            display: flex;
+
+            background-color: #021a13;
+
+            flex-direction: row;
+
+            gap: 10px;
+
+            position: relative;
+
+            z-index: 90;
+        }
+
+
+        /* =====================================================
+           NAV ITEMS
+        ===================================================== */
+
+        .nav_item {
+
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+
+            padding: 10px 20px;
+
+            border: 1px solid #D4A72C;
+
+            margin: 10px 15px;
+
+            box-shadow:
+                0 0 8px rgba(212, 167, 44, 0.5);
+
+            background:
+                rgba(2, 56, 36, 0.915);
+
+            border-radius: 20px;
+
+            font-size: 15px;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .nav_item:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                rgba(4, 77, 49, 0.95);
+
+            box-shadow:
+                0 0 15px
+                rgba(212, 167, 44, 0.8);
+        }
+
+        .nav_item a {
+
+            color: white;
+
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        #hero {
+
+            display: flex;
+
+            margin: 0;
+        }
+
+        #heroimg {
+
+            background-image:
+                url("Gemini_Generated_Image_8aq7yt8aq7yt8aq7.png");
+
+            background-size: cover;
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            width: 100%;
+
+            height: 100%;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        #heroimg::before {
+
+            content: "";
+
+            inset: 0;
+
+            background-color:
+                rgba(1, 32, 23, 0.7);
+
+            position: absolute;
+
+            z-index: 1;
+        }
+
+
+        /* =====================================================
+           COMPANY NAME
+        ===================================================== */
+
+        #comname {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 100%;
+
+            height: 600px;
+
+            margin-left: 30px;
+
+            padding: 45px 40px;
+
+            font-family:
+                'Montserrat',
+                Arial,
+                sans-serif;
+
+            font-size:
+                clamp(45px, 15vw, 70px);
+
+            font-weight: 800;
+
+            line-height: 1.05;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #F5F7F5;
+
+            text-shadow:
+                0 2px 10px rgba(0, 0, 0, 0.8),
+                0 0 25px rgba(255, 255, 255, 0.12);
+
+            animation:
+                reveal 1.5s
+                cubic-bezier(
+                    0.16,
+                    1,
+                    0.3,
+                    1
+                );
+        }
+
+
+        /* =====================================================
+           TALK TO US BUTTON
+        ===================================================== */
+
+        #formbtn {
+
+            padding:
+                20px 40px;
+
+            margin-top: 40px;
+
+            background:
+                rgba(2, 56, 36, 0.915);
+
+            border:
+                2px solid #D4A72C;
+
+            color: white;
+
+            font-size: 20px;
+
+            border-radius: 20px;
+
+            margin-left: 0;
+
+            box-shadow:
+                0 0 20px
+                rgba(0, 249, 0, 0.6);
+
+            cursor: pointer;
+
+            transition: 0.1s;
+        }
+
+        #formbtn:hover {
+
+            box-shadow:
+                inset 0 0 10px #00f900;
+
+            color: #D4A72C;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           SERVICE BUTTON
+        ===================================================== */
+
+        #servicebtn {
+
+            padding:
+                20px 40px;
+
+            background:
+                rgba(26, 77, 58, 0.915);
+
+            border:
+                2px solid #1e1b1b;
+
+            color: white;
+
+            font-size: 20px;
+
+            border-radius: 20px;
+
+            margin-left: 50px;
+
+            margin-top: 40px;
+
+            cursor: pointer;
+
+            transition: 0.1s;
+        }
+
+        #servicebtn:hover {
+
+            border:
+                1px solid #D4A72C;
+
+            color:
+                #D4A72C;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        #about {
+
+            color:
+                #F5F7F5;
+
+            background-color:
+                #012017;
+
+            padding:
+                80px 10%;
+
+            opacity: 0;
+
+            min-height:
+                400px;
+        }
+
+        #about.active {
+
+            opacity: 1;
+
+            animation:
+                sectionReveal 1s ease;
+        }
+
+
+        /* =====================================================
+           SERVICE
+        ===================================================== */
+
+        #service {
+
+            color:
+                #F5F7F5;
+
+            background:
+                #012017;
+
+            padding:
+                80px 10%;
+
+            opacity: 0;
+        }
+
+        #service.active {
+
+            opacity: 1;
+
+            animation:
+                sectionReveal 1s ease;
+        }
+
+
+        /* =====================================================
+           WHY CHOOSE US
+        ===================================================== */
+
+        #whyus {
+
+            position:
+                relative;
+
+            min-height:
+                800px;
+
+            color:
+                #F5F7F5;
+
+            background:
+                #012017;
+
+            padding:
+                80px 10%;
+
+            opacity:
+                0;
+
+            overflow:
+                hidden;
+        }
+
+        #whyus.active {
+
+            opacity:
+                1;
+
+            animation:
+                sectionReveal 1s ease;
+        }
+
+
+        /* =====================================================
+           WHY US BODY
+        ===================================================== */
+
+        #whyusbody {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                620px;
+
+            margin-top:
+                20px;
+        }
+
+
+        /* =====================================================
+           PREMIUM CIRCLE SYSTEM
+        ===================================================== */
+
+        .circle1,
+        .circle2,
+        .circle3 {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            border-radius:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            pointer-events:
+                none;
+        }
+
+
+        .circle3 {
+
+            width:
+                650px;
+
+            height:
+                650px;
+
+            border:
+                1px solid
+                rgba(212, 167, 44, 0.25);
+
+            box-shadow:
+                0 0 35px
+                rgba(212, 167, 44, 0.08);
+
+            z-index:
+                1;
+
+            animation:
+                slowRotate 30s
+                linear infinite;
+        }
+
+
+        .circle3::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                12px;
+
+            border:
+                1px dashed
+                rgba(212, 167, 44, 0.45);
+
+            border-radius:
+                50%;
+        }
+
+
+        .circle1 {
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            border:
+                2px solid
+                rgba(212, 167, 44, 0.65);
+
+            box-shadow:
+                0 0 20px
+                rgba(212, 167, 44, 0.12),
+                inset 0 0 20px
+                rgba(212, 167, 44, 0.04);
+
+            z-index:
+                2;
+
+            animation:
+                slowRotateReverse 22s
+                linear infinite;
+        }
+
+
+        .circle1::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                15px;
+
+            border:
+                1px dashed
+                rgba(212, 167, 44, 0.35);
+
+            border-radius:
+                50%;
+        }
+
+
+        .circle2 {
+
+            width:
+                350px;
+
+            height:
+                350px;
+
+            border:
+                2px solid
+                #D4A72C;
+
+            box-shadow:
+                0 0 15px
+                rgba(212, 167, 44, 0.35),
+                inset 0 0 20px
+                rgba(212, 167, 44, 0.12);
+
+            z-index:
+                3;
+        }
+
+
+        .circle2::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                12px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            border-radius:
+                50%;
+        }
+
+
+        #whyuscenter {
+
+            position:
+                absolute;
+
+            width:
+                150px;
+
+            height:
+                150px;
+
+            object-fit:
+                cover;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            border-radius:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index:
+                8;
+
+            border:
+                3px solid
+                #D4A72C;
+
+            padding:
+                5px;
+
+            background:
+                #012017;
+
+            box-shadow:
+
+                0 0 0 8px
+                rgba(212,167,44,0.08),
+
+                0 0 0 15px
+                rgba(212,167,44,0.04),
+
+                0 0 35px
+                rgba(212,167,44,0.55);
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        #whyuscenter:hover {
+
+            transform:
+                translate(-50%, -50%)
+                scale(1.08);
+        }
+
+
+        #whyusbody::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                185px;
+
+            height:
+                185px;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border:
+                1px solid
+                rgba(212,167,44,0.3);
+
+            border-radius:
+                50%;
+
+            z-index:
+                4;
+
+            pointer-events:
+                none;
+        }
+
+
+        /* =====================================================
+           WHY US LINES
+        ===================================================== */
+
+        .whyus_line {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                0;
+
+            width:
+                2px;
+
+            height:
+                145px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    #D4A72C
+                );
+
+            box-shadow:
+                0 0 10px
+                rgba(212,167,44,0.7);
+
+            transform:
+                translateX(-50%);
+
+            z-index:
+                5;
+        }
+
+
+        .whyus_linebottom {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                calc(50% + 110px);
+
+            width:
+                2px;
+
+            height:
+                145px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #D4A72C,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 10px
+                rgba(212,167,44,0.7);
+
+            transform:
+                translateX(-50%);
+
+            z-index:
+                5;
+        }
+
+
+        .whyus_lineleft {
+
+            position:
+                absolute;
+
+            left:
+                25%;
+
+            top:
+                50%;
+
+            width:
+                25%;
+
+            height:
+                2px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #D4A72C
+                );
+
+            box-shadow:
+                0 0 10px
+                rgba(212,167,44,0.7);
+
+            transform:
+                translateY(-50%);
+
+            z-index:
+                5;
+        }
+
+
+        .whyus_lineright {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            width:
+                25%;
+
+            height:
+                2px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #D4A72C,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 10px
+                rgba(212,167,44,0.7);
+
+            transform:
+                translateY(-50%);
+
+            z-index:
+                5;
+        }
+
+
+        /* =====================================================
+           TECH NODES
+        ===================================================== */
+
+        .circle1::after,
+        .circle2::after,
+        .circle3::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            background:
+                #D4A72C;
+
+            border-radius:
+                50%;
+
+            box-shadow:
+                0 0 12px
+                #D4A72C;
+        }
+
+
+        .circle1::after {
+
+            top:
+                -4px;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .circle2::after {
+
+            right:
+                -4px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+
+        .circle3::after {
+
+            bottom:
+                -4px;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        /* =====================================================
+           WHY CARDS
+        ===================================================== */
+
+        .whycard {
+
+            position:
+                absolute;
+
+            width:
+                250px;
+
+            min-height:
+                90px;
+
+            padding:
+                20px;
+
+            background:
+                rgba(2,26,19,0.96);
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
+            border:
+                1px solid
+                rgba(212,167,44,0.8);
+
+            color:
+                white;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1px;
+
+            box-shadow:
+                0 0 20px
+                rgba(212,167,44,0.15);
+
+            z-index:
+                10;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .whycard:hover {
+
+            box-shadow:
+                0 0 30px
+                rgba(212,167,44,0.5);
+        }
+
+
+        #topcard {
+
+            left:
+                50%;
+
+            top:
+                10%;
+
+            transform:
+                translateX(-50%);
+        }
+
+        #topcard:hover {
+
+            transform:
+                translateX(-50%)
+                scale(1.06);
+        }
+
+
+        #leftcard {
+
+            left:
+                20%;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+        #leftcard:hover {
+
+            transform:
+                translateY(-50%)
+                scale(1.06);
+        }
+
+
+        #rightcard {
+
+            right:
+                20%;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+        #rightcard:hover {
+
+            transform:
+                translateY(-50%)
+                scale(1.06);
+        }
+
+
+        #bottomcard {
+
+            left:
+                50%;
+
+            bottom:
+                10%;
+
+            transform:
+                translateX(-50%);
+        }
+
+        #bottomcard:hover {
+
+            transform:
+                translateX(-50%)
+                scale(1.06);
+        }
+
+
+        /* =====================================================
+           EYEBROW
+        ===================================================== */
+
+        .eyebrow {
+
+            display:
+                inline-block;
+
+            margin:
+                0;
+
+            color:
+                #D4A72C;
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                4px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .eyebrowsline {
+
+            display:
+                inline-block;
+
+            width:
+                95px;
+
+            margin-bottom:
+                5px;
+
+            margin-right:
+                -20px;
+
+            height:
+                1px;
+
+            background:
+                #D4A72C;
+        }
+
+
+        #eng_yellow {
+
+            color:
+                #D4A72C;
+
+            display:
+                inline-flex;
+        }
+
+
+        #hero_p {
+
+            font-size:
+                medium;
+
+            font-weight:
+                200;
+        }
+
+
+        /* =====================================================
+           SECTION HEADING
+        ===================================================== */
+
+        .headskew {
+
+            position:
+                relative;
+
+            z-index:
+                1;
+
+            color:
+                #1d1e1d;
+
+            display:
+                inline-block;
+
+            padding:
+                5px 20px;
+
+            margin-bottom:
+                30px;
+        }
+
+        .headskew::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #a2e4a2,
+                    #06ad00
+                );
+
+            box-shadow:
+                5px 5px 1px #06ad00;
+
+            transform:
+                translateY(-20px)
+                skew(20deg);
+
+            width:
+                120%;
+
+            height:
+                70px;
+
+            top:
+                10%;
+
+            left:
+                -20px;
+
+            z-index:
+                -1;
+        }
+
+
+        /* =====================================================
+           ABOUT TEXT
+        ===================================================== */
+
+        #abouttext {
+
+            color:
+                #F5F7F5;
+
+            font-weight:
+                800;
+
+            font-size:
+                21px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           SERVICE ROW
+        ===================================================== */
+
+        #card1 {
+
+            display:
+                flex;
+
+            flex-direction:
+                row;
+
+            justify-content:
+                space-between;
+
+            gap:
+                25px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        /* =====================================================
+           SERVICE CARD
+        ===================================================== */
+
+        .card {
+
+            padding:
+                5px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            width:
+                33.33%;
+
+            min-height:
+                350px;
+
+            font-size:
+                18px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background-color:
+                #023224;
+
+            border:
+                2px solid #D4A72C;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .card:hover {
+
+            color:
+                #D4A72C;
+
+            transform:
+                translateY(-10px);
+
+            filter:
+                drop-shadow(
+                    0 0 10px gold
+                );
+        }
+
+        .card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                -100%;
+
+            top:
+                0;
+
+            width:
+                100%;
+
+            height:
+                5px;
+
+            background-color:
+                #D4A72C;
+
+            box-shadow:
+                0 0 15px #D4A72C;
+
+            filter:
+                blur(3px);
+
+            transition:
+                left 0.55s ease;
+        }
+
+        .card:hover::before {
+
+            left:
+                0;
+        }
+
+
+        .headercard {
+
+            display:
+                flex;
+
+            flex-direction:
+                row;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            width:
+                100%;
+        }
+
+        .headercard h4 {
+
+            margin:
+                0;
+
+            padding:
+                20px;
+
+            color:
+                white;
+        }
+
+
+        .number {
+
+            display:
+                flex;
+
+            color:
+                #D4A72C;
+
+            font-weight:
+                1000;
+
+            padding:
+                20px;
+
+            font-size:
+                35px;
+
+            opacity:
+                0.4;
+        }
+
+
+        .carddetail {
+
+            font-family:
+                Cambria,
+                Cochin,
+                Georgia,
+                Times,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                medium;
+
+            color:
+                white;
+
+            display:
+                block;
+
+            padding:
+                10px;
+
+            line-height:
+                30px;
+
+            margin-left:
+                10%;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        /* =====================================================
+           PREMIUM CONTACT SECTION
+        ===================================================== */
+
+        #contact {
+
+            position:
+                relative;
+
+            color:
+                #F5F7F5;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(6,173,0,0.08),
+                    transparent 45%
+                ),
+                #012017;
+
+            padding:
+                90px 10% 40px;
+
+            opacity:
+                0;
+
+            min-height:
+                700px;
+
+            overflow:
+                hidden;
+        }
+
+
+        #contact.active {
+
+            opacity:
+                1;
+
+            animation:
+                sectionReveal 1s ease;
+        }
+
+
+        #contact::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            left:
+                50%;
+
+            top:
+                40%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid
+                rgba(212,167,44,0.08);
+
+            box-shadow:
+                0 0 100px
+                rgba(6,173,0,0.05);
+
+            pointer-events:
+                none;
+        }
+
+
+        #contact_header {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            margin-top:
+                20px;
+
+            margin-bottom:
+                10px;
+
+            color:
+                #D4A72C;
+
+            font-family:
+                Georgia,
+                'Times New Roman',
+                Times,
+                serif;
+
+            font-size:
+                14px;
+
+            letter-spacing:
+                4px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        #contact_header p {
+            margin:
+                0;
+        }
+
+
+        .contact_intro {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                850px;
+
+            margin:
+                20px auto 60px;
+
+            text-align:
+                center;
+        }
+
+
+        .contact_intro h2 {
+
+            font-family:
+                'Montserrat',
+                Arial,
+                sans-serif;
+
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            line-height:
+                1.15;
+
+            margin:
+                0 0 25px;
+
+            color:
+                #F5F7F5;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .contact_intro h2 span {
+
+            color:
+                #D4A72C;
+        }
+
+
+        .contact_intro p {
+
+            max-width:
+                750px;
+
+            margin:
+                10px auto;
+
+            color:
+                rgba(245,247,245,0.72);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+        }
+
+
+        .contact_grid {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                25px;
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto 60px;
+        }
+
+
+        .contact_card {
+
+            position:
+                relative;
+
+            min-height:
+                250px;
+
+            padding:
+                30px;
+
+            background:
+                rgba(2,50,36,0.72);
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            border:
+                1px solid
+                rgba(212,167,44,0.35);
+
+            border-radius:
+                20px;
+
+            overflow:
+                hidden;
+
+            transition:
+                transform 0.4s ease,
+                border-color 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+
+        .contact_card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                -100%;
+
+            top:
+                0;
+
+            width:
+                100%;
+
+            height:
+                2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #D4A72C,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 15px #D4A72C;
+
+            transition:
+                left 0.6s ease;
+        }
+
+
+        .contact_card:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-color:
+                rgba(212,167,44,0.9);
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.35),
+
+                0 0 25px
+                rgba(212,167,44,0.15);
+        }
+
+
+        .contact_card:hover::before {
+            left:
+                100%;
+        }
+
+
+        .contact_icon {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            margin-bottom:
+                25px;
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid
+                rgba(212,167,44,0.7);
+
+            color:
+                #D4A72C;
+
+            font-size:
+                25px;
+
+            background:
+                rgba(2,26,19,0.8);
+
+            box-shadow:
+                0 0 20px
+                rgba(212,167,44,0.15);
+        }
+
+
+        .contact_card_content small {
+
+            color:
+                rgba(245,247,245,0.55);
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                3px;
+
+            font-weight:
+                700;
+        }
+
+
+        .contact_card_content h3 {
+
+            color:
+                #F5F7F5;
+
+            font-size:
+                20px;
+
+            margin:
+                12px 0;
+
+            word-break:
+                break-word;
+        }
+
+
+        .contact_card_content p {
+
+            color:
+                rgba(245,247,245,0.65);
+
+            line-height:
+                1.7;
+
+            font-size:
+                14px;
+
+            margin:
+                10px 0 15px;
+        }
+
+
+        .contact_link {
+
+            display:
+                inline-block;
+
+            margin-top:
+                8px;
+
+            color:
+                #D4A72C;
+
+            text-decoration:
+                none;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+        }
+
+
+        .contact_link:hover {
+
+            color:
+                #a2e4a2;
+
+            transform:
+                translateX(5px);
+        }
+
+
+        .contact_cta {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto 50px;
+
+            padding:
+                35px 40px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(2,50,36,0.95),
+                    rgba(2,26,19,0.95)
+                );
+
+            border:
+                1px solid
+                rgba(212,167,44,0.55);
+
+            border-radius:
+                20px;
+
+            box-shadow:
+                0 0 30px
+                rgba(6,173,0,0.08);
+        }
+
+
+        .contact_cta small {
+
+            color:
+                #D4A72C;
+
+            letter-spacing:
+                3px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+        }
+
+
+        .contact_cta h2 {
+
+            color:
+                white;
+
+            margin:
+                8px 0 0;
+
+            font-family:
+                'Montserrat',
+                Arial,
+                sans-serif;
+        }
+
+
+        .contact_cta_button {
+
+            display:
+                inline-block;
+
+            padding:
+                16px 25px;
+
+            border:
+                1px solid
+                #D4A72C;
+
+            border-radius:
+                12px;
+
+            color:
+                #D4A72C;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+
+            font-size:
+                13px;
+
+            letter-spacing:
+                1px;
+
+            white-space:
+                nowrap;
+        }
+
+
+        #contact footer {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            text-align:
+                center;
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid
+                rgba(212,167,44,0.12);
+
+            color:
+                rgba(245,247,245,0.45);
+        }
+
+
+        #contact footer h5 {
+
+            font-weight:
+                400;
+
+            letter-spacing:
+                0.5px;
+        }
+
+
+        /* =====================================================
+           FORM OVERLAY
+        ===================================================== */
+
+        #formoverlay {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            background:
+                rgba(0,0,0,0.78);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                20px;
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            transition:
+                opacity 0.35s ease,
+                visibility 0.35s ease;
+
+            z-index:
+                9999;
+        }
+
+
+        #formoverlay.active {
+
+            opacity:
+                1;
+
+            visibility:
+                visible;
+        }
+
+
+        /* =====================================================
+           FORM BOX
+        ===================================================== */
+
+        #contactformbox {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            max-width:
+                550px;
+
+            max-height:
+                90vh;
+
+            overflow-y:
+                auto;
+
+            padding:
+                40px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(3,55,38,0.98),
+                    rgba(1,25,18,0.98)
+                );
+
+            border:
+                1px solid
+                rgba(212,167,44,0.75);
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                0 0 40px
+                rgba(212,167,44,0.2),
+
+                0 25px 80px
+                rgba(0,0,0,0.7);
+
+            transform:
+                translateY(40px)
+                scale(0.95);
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        #formoverlay.active #contactformbox {
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        /* =====================================================
+           FORM CLOSE
+        ===================================================== */
+
+        #closeform {
+
+            position:
+                absolute;
+
+            top:
+                15px;
+
+            right:
+                18px;
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            border:
+                1px solid
+                rgba(212,167,44,0.6);
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(2,26,19,0.8);
+
+            color:
+                #D4A72C;
+
+            font-size:
+                22px;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.3s;
+        }
+
+
+        #closeform:hover {
+
+            background:
+                #D4A72C;
+
+            color:
+                #012017;
+
+            transform:
+                rotate(90deg);
+        }
+
+
+        /* =====================================================
+           FORM HEADER
+        ===================================================== */
+
+        .form_small_title {
+
+            color:
+                #D4A72C;
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                4px;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        #contactformbox h2 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                #F5F7F5;
+
+            font-family:
+                'Montserrat',
+                Arial,
+                sans-serif;
+
+            font-size:
+                32px;
+        }
+
+
+        #contactformbox .formintro {
+
+            margin:
+                0 0 30px;
+
+            color:
+                rgba(245,247,245,0.65);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           FORM GROUP
+        ===================================================== */
+
+        .form_group {
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .form_group label {
+
+            display:
+                block;
+
+            margin-bottom:
+                8px;
+
+            color:
+                rgba(245,247,245,0.8);
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .form_group input,
+        .form_group textarea {
+
+            width:
+                100%;
+
+            padding:
+                14px 16px;
+
+            border:
+                1px solid
+                rgba(212,167,44,0.3);
+
+            border-radius:
+                12px;
+
+            outline:
+                none;
+
+            background:
+                rgba(2,26,19,0.75);
+
+            color:
+                white;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size:
+                15px;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .form_group input::placeholder,
+        .form_group textarea::placeholder {
+
+            color:
+                rgba(255,255,255,0.35);
+        }
+
+
+        .form_group input:focus,
+        .form_group textarea:focus {
+
+            border-color:
+                #D4A72C;
+
+            box-shadow:
+                0 0 15px
+                rgba(212,167,44,0.15);
+        }
+
+
+        .form_group textarea {
+
+            min-height:
+                120px;
+
+            resize:
+                vertical;
+        }
+
+
+        /* =====================================================
+           SUBMIT BUTTON
+        ===================================================== */
+
+        #submitform {
+
+            width:
+                100%;
+
+            padding:
+                16px;
+
+            margin-top:
+                8px;
+
+            border:
+                1px solid
+                #D4A72C;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #D4A72C,
+                    #b88a13
+                );
+
+            color:
+                #012017;
+
+            font-size:
+                15px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                1px;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        #submitform:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 0 25px
+                rgba(212,167,44,0.45);
+        }
+
+
+        #submitform:disabled {
+
+            opacity:
+                0.6;
+
+            cursor:
+                not-allowed;
+
+            transform:
+                none;
+        }
+
+
+        .form_note {
+
+            text-align:
+                center;
+
+            margin:
+                15px 0 0;
+
+            color:
+                rgba(245,247,245,0.4);
+
+            font-size:
+                11px;
+
+            line-height:
+                1.5;
+        }
+
+
+        /* =====================================================
+           SUCCESS MESSAGE
+        ===================================================== */
+
+        #successmessage {
+
+            display:
+                none;
+
+            text-align:
+                center;
+
+            padding:
+                30px 10px;
+        }
+
+
+        #successmessage .successicon {
+
+            width:
+                70px;
+
+            height:
+                70px;
+
+            margin:
+                0 auto 20px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border:
+                2px solid
+                #D4A72C;
+
+            border-radius:
+                50%;
+
+            color:
+                #D4A72C;
+
+            font-size:
+                35px;
+
+            box-shadow:
+                0 0 25px
+                rgba(212,167,44,0.3);
+        }
+
+
+        #successmessage h2 {
+
+            margin:
+                0 0 10px;
+        }
+
+
+        #successmessage p {
+
+            color:
+                rgba(245,247,245,0.65);
+
+            line-height:
+                1.7;
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           MOBILE FORM
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            #contactformbox {
+
+                padding:
+                    30px 22px;
+
+                border-radius:
+                    20px;
+            }
+
+
+            #contactformbox h2 {
+
+                font-size:
+                    27px;
+            }
+
+
+            .form_group input,
+            .form_group textarea {
+
+                font-size:
+                    16px;
+            }
+        }
+
+
+        /* =====================================================
+           ROTATION ANIMATIONS
+        ===================================================== */
+
+        @keyframes slowRotate {
+
+            from {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(0deg);
+            }
+
+            to {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(360deg);
+            }
+        }
+
+
+        @keyframes slowRotateReverse {
+
+            from {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(360deg);
+            }
+
+            to {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(0deg);
+            }
+        }
+
+
+        /* =====================================================
+           SECTION ANIMATION
+        ===================================================== */
+
+        @keyframes sectionReveal {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(80px)
+                    rotateX(20deg);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0)
+                    rotateX(0);
+            }
+        }
+
+
+        /* =====================================================
+           HERO ANIMATION
+        ===================================================== */
+
+        @keyframes reveal {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateX(100px);
+
+                letter-spacing:
+                    15px;
+
+                filter:
+                    blur(10px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                filter:
+                    blur(0);
+
+                letter-spacing:
+                    2px;
+
+                transform:
+                    translateX(0);
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE WEBSITE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            #logoheader {
+
+                justify-content:
+                    space-between;
+            }
+
+
+            #menubtn {
+
+                display:
+                    block;
+            }
+
+
+            #navigator {
+
+                flex-direction:
+                    column;
+
+                gap:
+                    5px;
+
+                width:
+                    0;
+
+                height:
+                    0;
+
+                overflow:
+                    hidden;
+
+                opacity:
+                    0;
+
+                transition:
+                    width 0.5s ease,
+                    opacity 0.3s ease;
+            }
+
+
+            #navigator.active {
+
+                width:
+                    100%;
+
+                height:
+                    auto;
+
+                opacity:
+                    1;
+            }
+
+
+            .nav_item {
+
+                margin:
+                    10px 20px;
+
+                padding:
+                    10px 12px;
+
+                font-size:
+                    14px;
+            }
+
+
+            #heroimg {
+
+                height:
+                    400px;
+
+                background-size:
+                    cover;
+            }
+
+
+            #comname {
+
+                font-size:
+                    32px;
+
+                padding:
+                    30px 15px;
+
+                letter-spacing:
+                    1px;
+            }
+
+
+            #formbtn {
+
+                padding:
+                    15px 25px;
+
+                font-size:
+                    16px;
+            }
+
+
+            #servicebtn {
+
+                padding:
+                    15px 20px;
+
+                margin-left:
+                    10px;
+
+                font-size:
+                    16px;
+            }
+
+
+            #about,
+            #service,
+            #contact {
+
+                padding:
+                    60px 7%;
+            }
+
+
+            #abouttext {
+
+                font-size:
+                    17px;
+            }
+
+
+            #card1 {
+
+                flex-direction:
+                    column;
+
+                gap:
+                    20px;
+            }
+
+
+            .card {
+
+                width:
+                    100%;
+
+                margin:
+                    0;
+
+                min-height:
+                    auto;
+            }
+
+
+            #whyus {
+
+                min-height:
+                    850px;
+
+                padding:
+                    60px 5%;
+            }
+
+
+            #whyusbody {
+
+                height:
+                    680px;
+            }
+
+
+            .circle3 {
+
+                width:
+                    470px;
+
+                height:
+                    470px;
+            }
+
+
+            .circle1 {
+
+                width:
+                    360px;
+
+                height:
+                    360px;
+            }
+
+
+            .circle2 {
+
+                width:
+                    250px;
+
+                height:
+                    250px;
+            }
+
+
+            #whyuscenter {
+
+                width:
+                    120px;
+
+                height:
+                    120px;
+            }
+
+
+            #whyusbody::after {
+
+                width:
+                    145px;
+
+                height:
+                    145px;
+            }
+
+
+            .whyus_line {
+
+                height:
+                    100px;
+            }
+
+
+            .whyus_linebottom {
+
+                top:
+                    calc(50% + 85px);
+
+                height:
+                    100px;
+            }
+
+
+            .whyus_lineleft {
+
+                left:
+                    5%;
+
+                width:
+                    30%;
+            }
+
+
+            .whyus_lineright {
+
+                left:
+                    65%;
+
+                width:
+                    30%;
+            }
+
+
+            .whycard {
+
+                width:
+                    110px;
+
+                min-height:
+                    70px;
+
+                padding:
+                    10px;
+
+                font-size:
+                    12px;
+            }
+
+
+            #topcard {
+
+                top:
+                    20px;
+            }
+
+
+            #leftcard {
+
+                left:
+                    0;
+            }
+
+
+            #rightcard {
+
+                right:
+                    0;
+            }
+
+
+            #bottomcard {
+
+                bottom:
+                    20px;
+            }
+
+
+            #contact_header {
+
+                font-size:
+                    10px;
+
+                letter-spacing:
+                    2px;
+
+                text-align:
+                    center;
+            }
+
+
+            .contact_intro {
+
+                margin-bottom:
+                    40px;
+            }
+
+
+            .contact_intro h2 {
+
+                font-size:
+                    32px;
+            }
+
+
+            .contact_intro p {
+
+                font-size:
+                    15px;
+
+                line-height:
+                    1.7;
+            }
+
+
+            .contact_grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    18px;
+
+                margin-bottom:
+                    40px;
+            }
+
+
+            .contact_card {
+
+                min-height:
+                    auto;
+
+                padding:
+                    25px;
+            }
+
+
+            .contact_cta {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    25px;
+
+                gap:
+                    25px;
+            }
+
+
+            .contact_cta h2 {
+
+                font-size:
+                    22px;
+            }
+
+
+            .contact_cta_button {
+
+                width:
+                    100%;
+
+                text-align:
+                    center;
+            }
+
+        }
+
     </style>
+
 </head>
 
+
 <body>
-    <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
-    <div id="logoheader"> <img src="Gemini_Generated_Image_3aer0a3aer0a3aer-removebg-preview.png" id="logo" alt="">
-        <div id="locator">
-            <div id="login_card"><a href="#hero" style="text-decoration: none;color: #0B2038;">Home</a></div>
-            <div id="login_card"><a href="#about" style="text-decoration: none;color: #0B2038;">About</a></div>
-            <div id="login_card"><a href="#service" style="text-decoration: none;color: #0B2038;">Service</a></div>
-            <div id="login_card"><a href="#contactus" style="text-decoration: none;color: #0B2038;">Contact</a></div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<div id="hero">
+
+    <div id="heroimg">
+
+
+        <!-- HEADER -->
+
+        <div id="logoheader">
+
+            <div id="logo">
+
+                <img
+                    src="Gemini_Generated_Image_3aer0a3aer0a3aer-removebg-preview.png"
+                    alt="HES Logo"
+                >
+
+            </div>
+
+
+            <button id="menubtn">
+                ☰
+            </button>
+
+
+            <div id="navigator">
+
+                <div class="nav_item">
+                    <a href="#hero">
+                        Home
+                    </a>
+                </div>
+
+                <div class="nav_item">
+                    <a href="#about">
+                        About
+                    </a>
+                </div>
+
+                <div class="nav_item">
+                    <a href="#service">
+                        Services
+                    </a>
+                </div>
+
+                <div class="nav_item">
+                    <a href="#whyus">
+                        Why Us
+                    </a>
+                </div>
+
+                <div class="nav_item">
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+
         </div>
+
+
+        <!-- HERO CONTENT -->
+
+        <h1 id="comname">
+
+            <div class="eyebrowsline"></div>
+
+            <div class="eyebrow">
+                Engineering ● Precision ● Reliability
+            </div>
+
+            <div class="eyebrowsline"></div>
+
+            <br>
+
+
+            HANUS
+
+            <span id="eng_yellow">
+                ENGINEERING
+            </span>
+
+            <br>
+
+            SOLUTIONS SDN BHD
+
+            <br>
+
+
+            <p id="hero_p">
+
+                Industrial engineering solutions built around
+                precision workmanship, dependable
+                performance, and practical engineering expertise.
+
+            </p>
+
+
+            <button id="formbtn">
+                TALK TO US
+            </button>
+
+
+            <button id="servicebtn">
+                Explore Our Service
+            </button>
+
+        </h1>
+
     </div>
-    <div id="body">
-        <div id="hero">
-            <h1 style="font-family:Arial, Helvetica, sans-serif; color:#D4AF37 ; font-size: 18px;">HANUS ENGINEERING
-                SOLUTIONS SDN BHD</h1>
-            <h1 style=" display:inline; font-family: Arial, Helvetica, sans-serif; color: #0B2038; font-size: 50px;">
-                Engineering Solutions.Service. <h1
-                    style=" display:inline;color: #D4AF37; font-size: 50px; font-family: Arial, Helvetica, sans-serif; ">
-                    Precision.</h1>
-            </h1>
-            <p
-                style="color: #153358; font-style: normal; font-weight: 900; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
-                Reliable engineering and industrial solutions for repair, refurbishment, coating, machining and
-                fabrication.</p>
-            <div class="contactbtn">Contact Us</div>
+
+</div>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<div id="about">
+
+    <h1 class="headskew">
+        ABOUT US:
+    </h1>
+
+
+    <p id="abouttext">
+
+        Engineering Expertise You Can Rely On.
+
+        <br><br>
+
+        Hanus Engineering Solutions Sdn Bhd provides
+        engineering and industrial service solutions
+        focused on quality workmanship, precision,
+        and reliable results.
+
+        <br><br>
+
+        We support industrial requirements through
+        general engineering works, industrial coating,
+        mechanical seal refurbishment, pump servicing,
+        metal spraying, precision machining,
+        fabrication, and balancing services.
+
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<div id="service">
+
+    <h1 class="headskew">
+        SERVICES WE PROVIDE
+    </h1>
+
+    <br><br>
+
+
+    <div id="card1">
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    General Engineering Works
+                </h4>
+
+                <div class="number">
+                    01
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Comprehensive engineering support
+                including repair, maintenance,
+                modification, installation, and
+                workshop-based engineering solutions
+                for industrial equipment and components.
+
+            </div>
+
         </div>
-        <div id="about">
-            <h1 style="font-weight: 900;">ABOUT US</h1>
-            <h3 style="font-weight: 700;">Engineering Expertise You Can Rely On</h3>
-            <p>Hanus Engineering Solutions Sdn Bhd provides engineering and industrial service solutions focused on
-                quality workmanship, precision and reliable results.</p>
-            <p>We support industrial requirements through general engineering works, industrial coating, mechanical seal
-                refurbishment, pump servicing, metal spray, precision machining, fabrication and balancing services.</p>
-            <p>Our goal is simple: deliver practical engineering solutions that help keep your equipment performing
-                reliably.</p>
+
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    Industrial Coating Works
+                </h4>
+
+                <div class="number">
+                    02
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Industrial surface protection solutions
+                designed to improve wear resistance,
+                corrosion protection, and component
+                service life under demanding operating
+                conditions.
+
+            </div>
+
         </div>
+
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    Mechanical Seal Refurbishment
+                </h4>
+
+                <div class="number">
+                    03
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Inspection, repair, refurbishment,
+                and replacement of mechanical seal
+                components to restore sealing
+                performance, reliability, and
+                operational efficiency.
+
+            </div>
+
+        </div>
+
     </div>
-    <div id="service">
-        <h1>Services</h1>
-        <h3>Our Engineering Services</h3>
-        <div class="service-item"> <span class="service-number">01</span> <span class="service-name">General Engineering
-                Works</span> </div>
-        <div class="service-item"> <span class="service-number">02</span> <span class="service-name">Industrial Coating
-                Works</span> </div>
-        <div class="service-item"> <span class="service-number">03</span> <span class="service-name">Mechanical Seal
-                Refurbishment</span> </div>
-        <div class="service-item"> <span class="service-number">04</span> <span class="service-name">Pump Servicing &
-                Refurbishment</span> </div>
-        <div class="service-item"> <span class="service-number">05</span> <span class="service-name">Metal Spray,
-                Precision Machining & Fabrication</span> </div>
-        <div class="service-item"> <span class="service-number">06</span> <span class="service-name">Balancing Machine
-                Services</span> </div>
+
+
+    <div id="card1">
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    Pump Servicing &
+                    Refurbishment
+                </h4>
+
+                <div class="number">
+                    04
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Complete pump inspection,
+                dismantling, servicing,
+                component repair, alignment,
+                and refurbishment to restore
+                dependable pump performance
+                and extend equipment life.
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    Metal Spray, Precision Machining
+                    & Fabrication
+                </h4>
+
+                <div class="number">
+                    05
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Specialized metal spraying,
+                precision machining, and fabrication
+                services for restoring worn components,
+                achieving dimensional accuracy,
+                and manufacturing custom industrial parts.
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="headercard">
+
+                <h4>
+                    Balancing Machine Services
+                </h4>
+
+                <div class="number">
+                    06
+                </div>
+
+            </div>
+
+            <div class="carddetail">
+
+                Dynamic balancing services for
+                rotating components to minimize
+                vibration, improve machine stability,
+                reduce bearing loads, and enhance
+                equipment operating life.
+
+            </div>
+
+        </div>
+
     </div>
-    <div id="whyus">
-        <h1>WHY US ?</h1>
-        <h1 style="margin: 0%; ">Built on Precision & Reliability</h1>
-        <h2 style="margin: 0% ; margin-left: 20px;">Precision</h2>
-        <p style="margin: 0%; margin-left: 40px;">Attention to accuracy, workmanship and engineering requirements.</p>
-        <h2 style="margin: 0% ; margin-left: 20px;">Reliability</h2>
-        <p style="margin: 0%; margin-left: 40px;">Dependable service focused on long-term equipment performance.</p>
-        <h2 style="margin: 0% ; margin-left: 20px;">Quality Workmanship</h2>
-        <p style="margin: 0%; margin-left: 40px;">Professional handling of engineering, repair and refurbishment work.
+
+</div>
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<div id="whyus">
+
+    <h1 class="headskew">
+        WHY CHOOSE US?
+    </h1>
+
+
+    <div id="whyusbody">
+
+        <div class="circle3"></div>
+
+        <div class="circle1"></div>
+
+        <div class="circle2"></div>
+
+
+        <img
+            src="Screenshot 2026-08-25 220152.png"
+            id="whyuscenter"
+            alt="Why Choose HES"
+        >
+
+
+        <div
+            id="topcard"
+            class="whycard"
+        >
+
+            <div class="number">
+                01
+            </div>
+
+            QUALITY
+
+        </div>
+
+
+        <div class="whyus_line"></div>
+
+
+        <div
+            id="leftcard"
+            class="whycard"
+        >
+
+            <div class="number">
+                04
+            </div>
+
+            PRECISION
+
+        </div>
+
+
+        <div class="whyus_lineleft"></div>
+
+
+        <div
+            id="rightcard"
+            class="whycard"
+        >
+
+            <div class="number">
+                02
+            </div>
+
+            RELIABILITY
+
+        </div>
+
+
+        <div class="whyus_lineright"></div>
+
+
+        <div
+            id="bottomcard"
+            class="whycard"
+        >
+
+            <div class="number">
+                03
+            </div>
+
+            EXPERIENCE
+
+        </div>
+
+
+        <div class="whyus_linebottom"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<div id="contact">
+
+    <h1 class="headskew">
+        CONTACT
+    </h1>
+
+    <div id="contact_header">
+
+        <p>
+            LET'S DISCUSS YOUR ENGINEERING REQUIREMENT
         </p>
-        <h2 style="margin: 0% ; margin-left: 20px;">Practical Solutions</h2>
-        <p style="margin: 0%; margin-left: 40px;">Solutions developed around real industrial requirements.</p>
+
     </div>
-    <div id="approach">
-        <h1>Our Approach</h1>
-        <h2>From Requirement to Reliable Solution</h2>
-        <div class="service-item"> <span class="service-number">01</span> <span class="service-name">Understand</span>
-        </div>
-        <div class="service-explain">We understand your equipment, component and service requirements.</div>
-        <div class="service-item"> <span class="service-number">02</span> <span class="service-name">Assess</span>
-        </div>
-        <div class="service-explain">We inspect the condition and identify the appropriate engineering solution.</div>
-        <div class="service-item"> <span class="service-number">03</span> <span class="service-name">Restore</span>
-        </div>
-        <div class="service-explain">We carry out the required repair, refurbishment, machining, coating or fabrication
-            work</div>
-        <div class="service-item"> <span class="service-number">04</span> <span class="service-name">Deliver</span>
-        </div>
-        <div class="service-explain">We aim to deliver reliable results that meet the required application and
-            specifications.</div>
+
+
+    <div class="contact_intro">
+
+        <h2>
+            Engineering Support When
+            <span>Precision Matters.</span>
+        </h2>
+
+        <p>
+            Need pump servicing, mechanical seal refurbishment,
+            industrial coating, precision machining, fabrication,
+            balancing, or other engineering support?
+        </p>
+
+        <p>
+            Get in touch with Hanus Engineering Solutions Sdn Bhd.
+            Our team is ready to understand your requirement and
+            discuss the right engineering solution.
+        </p>
+
     </div>
-    <div id="contactus">
-        <h1>Contact</h1>
-        <h2>Let's Discuss Your Engineering Requirement</h2>
-        <h5>Need pump servicing, mechanical seal refurbishment, industrial coating, machining, fabrication or other
-            engineering support?</h5>
-        <h5>Get in touch with Hanus Engineering Solutions Sdn Bhd.</h5>
-        <h2>Contact Details</h2>
-        <h3>Phone : </h3> <a href="tel:+60 1159321688">+60 11-59321688</a>
-        <h3>Email US :</h3> <a href="mailto:hanussales@gmail.com">hanussales@gmail.com</a>
-        <h3>Location :</h3>
-        <div class="location">
-            <h2>Our Location</h2>
-            <p> 📍 28, Jalan Sungai Rasau 34,<br> Kawasan Perindustrian Sungai Rasau,<br> 41300 Klang, Selangor,
-                Malaysia </p> <a
-                href="https://www.google.com/maps/place/28,+Jalan+Sungai+Rasau+34,+Kawasan+Perindustrian+Sungai+Rasau,+41300+Klang,+Selangor,+Malaysia"
-                target="_blank" rel="noopener noreferrer" class="location-btn"> Get Directions → </a>
+
+
+    <div class="contact_grid">
+
+
+        <!-- PHONE -->
+
+        <div class="contact_card">
+
+            <div class="contact_icon">
+                ☎
+            </div>
+
+            <div class="contact_card_content">
+
+                <small>
+                    CALL US
+                </small>
+
+                <h3>
+                    +60 11-59321688
+                </h3>
+
+                <a
+                    href="tel:+601159321688"
+                    class="contact_link"
+                >
+                    Call Now →
+                </a>
+
+            </div>
+
         </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="contact_card">
+
+            <div class="contact_icon">
+                ✉
+            </div>
+
+            <div class="contact_card_content">
+
+                <small>
+                    EMAIL US
+                </small>
+
+                <h3>
+                    hanussales@gmail.com
+                </h3>
+
+                <a
+                    href="mailto:hanussales@gmail.com"
+                    class="contact_link"
+                >
+                    Send Email →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="contact_card">
+
+            <div class="contact_icon">
+                ⌖
+            </div>
+
+            <div class="contact_card_content">
+
+                <small>
+                    VISIT US
+                </small>
+
+                <h3>
+                    Klang, Selangor
+                </h3>
+
+                <p>
+                    28, Jalan Sungai Rasau 34,<br>
+                    Kawasan Perindustrian Sungai Rasau,<br>
+                    41300 Klang, Selangor, Malaysia
+                </p>
+
+                <a
+                    href="https://www.google.com/maps/place/28,+Jalan+Sungai+Rasau+34,+Kawasan+Perindustrian+Sungai+Rasau,+41300+Klang,+Selangor,+Malaysia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact_link"
+                >
+                    Get Directions →
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
+
+
+    <!-- =================================================
+         CONTACT CTA
+    ================================================= -->
+
+    <div class="contact_cta">
+
+        <div>
+
+            <small>
+                HAVE AN ENGINEERING REQUIREMENT?
+            </small>
+
+            <h2>
+                Let's Build the Right Solution.
+            </h2>
+
+        </div>
+
+        <button
+            class="contact_cta_button"
+            id="ctaformbtn"
+            type="button"
+        >
+            TALK TO AN ENGINEER →
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
     <footer>
-        <h5>© 2026 Hanus Engineering Solutions Sdn Bhd. All Rights Reserved.</h5>
+
+        <h5>
+            © 2026 Hanus Engineering Solutions Sdn Bhd.
+            All Rights Reserved.
+        </h5>
+
     </footer>
-    <script src="" async defer></script>
+
+</div>
+
+
+<!-- =====================================================
+     FORM OVERLAY
+===================================================== -->
+
+<div id="formoverlay">
+
+    <div id="contactformbox">
+
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            id="closeform"
+            type="button"
+            aria-label="Close form"
+        >
+            ×
+        </button>
+
+
+        <!-- FORM CONTENT -->
+
+        <div id="formcontent">
+
+            <div class="form_small_title">
+                HANUS ENGINEERING SOLUTIONS
+            </div>
+
+            <h2>
+                Let's Talk.
+            </h2>
+
+            <p class="formintro">
+                Tell us about your engineering requirement.
+                Our team will get back to you as soon as possible.
+            </p>
+
+
+            <!-- =================================================
+                 FORM
+            ================================================= -->
+
+            <form
+                id="engineeringForm"
+                action="https://formsubmit.co/hariharanthangaraj15@gmail.com"
+                method="POST"
+            >
+
+                <!-- EMAIL SUBJECT -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Engineering Enquiry - HES Website"
+                >
+
+
+                <!-- DISABLE CAPTCHA -->
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+
+
+                <!-- THANK YOU REDIRECT -->
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://hes-website-fh8z.vercel.app/"
+                >
+
+
+                <!-- NAME -->
+
+                <div class="form_group">
+
+                    <label for="visitorName">
+                        FULL NAME *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        name="Name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form_group">
+
+                    <label for="visitorEmail">
+                        EMAIL ADDRESS *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="visitorEmail"
+                        name="Email"
+                        placeholder="yourname@company.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form_group">
+
+                    <label for="visitorPhone">
+                        PHONE NUMBER *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="visitorPhone"
+                        name="Phone"
+                        placeholder="+60 XX-XXXX XXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div class="form_group">
+
+                    <label for="visitorCompany">
+                        COMPANY NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="visitorCompany"
+                        name="Company"
+                        placeholder="Your company name"
+                    >
+
+                </div>
+
+
+                <!-- REQUIREMENT -->
+
+                <div class="form_group">
+
+                    <label for="visitorRequirement">
+                        ENGINEERING REQUIREMENT *
+                    </label>
+
+                    <textarea
+                        id="visitorRequirement"
+                        name="Requirement"
+                        placeholder="Tell us what engineering service you need..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="submitform"
+                >
+                    SEND ENQUIRY →
+                </button>
+
+
+                <p class="form_note">
+                    Your information will be sent securely to
+                    Hanus Engineering Solutions.
+                </p>
+
+            </form>
+
+        </div>
+
+
+        <!-- =================================================
+             SUCCESS MESSAGE
+        ================================================= -->
+
+        <div id="successmessage">
+
+            <div class="successicon">
+                ✓
+            </div>
+
+            <h2>
+                Enquiry Sent!
+            </h2>
+
+            <p>
+                Thank you for contacting Hanus Engineering
+                Solutions. Our team will review your
+                requirement and get back to you.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    const menu =
+        document.querySelector("#menubtn");
+
+
+    const nav =
+        document.querySelector("#navigator");
+
+
+    const hero =
+        document.querySelector("#hero");
+
+
+    menu.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+            nav.classList.toggle("active");
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE MENU
+    ===================================================== */
+
+    hero.addEventListener(
+        "click",
+        function () {
+
+            nav.classList.remove("active");
+
+        }
+    );
+
+
+    /* =====================================================
+       NAV ITEMS
+    ===================================================== */
+
+    const navItems =
+        document.querySelectorAll(
+            ".nav_item a"
+        );
+
+
+    navItems.forEach(
+        function (item) {
+
+            item.addEventListener(
+                "click",
+                function () {
+
+                    nav.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
+
+    const about =
+        document.querySelector("#about");
+
+
+    const service =
+        document.querySelector("#service");
+
+
+    const whyus =
+        document.querySelector("#whyus");
+
+
+    const contact =
+        document.querySelector("#contact");
+
+
+    /* =====================================================
+       OBSERVER
+    ===================================================== */
+
+    const sectionObserver =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("active");
+
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                threshold: 0.2
+            }
+
+        );
+
+
+    sectionObserver.observe(about);
+
+    sectionObserver.observe(service);
+
+    sectionObserver.observe(whyus);
+
+    sectionObserver.observe(contact);
+
+
+    /* =====================================================
+       FORM OVERLAY
+    ===================================================== */
+
+    const formOverlay =
+        document.querySelector(
+            "#formoverlay"
+        );
+
+
+    const formButton =
+        document.querySelector(
+            "#formbtn"
+        );
+
+
+    const ctaFormButton =
+        document.querySelector(
+            "#ctaformbtn"
+        );
+
+
+    const closeForm =
+        document.querySelector(
+            "#closeform"
+        );
+
+
+    /* =====================================================
+       OPEN FORM
+    ===================================================== */
+
+    function openForm() {
+
+        formOverlay.classList.add(
+            "active"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /* =====================================================
+       CLOSE FORM
+    ===================================================== */
+
+    function closeContactForm() {
+
+        formOverlay.classList.remove(
+            "active"
+        );
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    /* =====================================================
+       BUTTON EVENTS
+    ===================================================== */
+
+    formButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+            openForm();
+
+        }
+    );
+
+
+    ctaFormButton.addEventListener(
+        "click",
+        function () {
+
+            openForm();
+
+        }
+    );
+
+
+    closeForm.addEventListener(
+        "click",
+        function () {
+
+            closeContactForm();
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ===================================================== */
+
+    formOverlay.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === formOverlay
+            ) {
+
+                closeContactForm();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ESC KEY
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeContactForm();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       FORM SUBMISSION
+    ===================================================== */
+
+    const engineeringForm =
+        document.querySelector(
+            "#engineeringForm"
+        );
+
+
+    const submitButton =
+        document.querySelector(
+            "#submitform"
+        );
+
+
+    const formContent =
+        document.querySelector(
+            "#formcontent"
+        );
+
+
+    const successMessage =
+        document.querySelector(
+            "#successmessage"
+        );
+
+
+    engineeringForm.addEventListener(
+        "submit",
+        function () {
+
+            submitButton.disabled =
+                true;
+
+            submitButton.innerHTML =
+                "SENDING ENQUIRY...";
+
+        }
+    );
+
+
+</script>
+
+
 </body>
 
 </html>
