@@ -139,62 +139,46 @@
            NAVIGATION
         ===================================================== */
 
-        #navigator {
+       html {
+    scroll-behavior: smooth;
+}
 
-            display: flex;
+#navigator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-            align-items: center;
+.nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            gap: 5px;
-        }
+    padding: 12px 22px;
 
+    color: white;
+    border: 1px solid #D4A72C;
+    padding: 10px;
 
-        .nav_item {
+    text-decoration: none;
 
-            padding: 10px 18px;
+    cursor: pointer;
 
-            border: 1px solid #D4A72C;
+    border-radius: 10px;
 
-            border-radius: 20px;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
 
-            background:
-                rgba(2, 56, 36, 0.9);
-
-            box-shadow:
-                0 0 8px
-                rgba(212, 167, 44, 0.35);
-
-            transition:
-                0.3s ease;
-        }
-
-
-        .nav_item:hover {
-
-            transform:
-                translateY(-3px);
-
-            background:
-                rgba(4, 77, 49, 0.95);
-
-            box-shadow:
-                0 0 18px
-                rgba(212, 167, 44, 0.65);
-        }
-
-
-        .nav_item a {
-
-            color: white;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 600;
-        }
-
-
+.nav_item:hover {
+    background: rgba(6, 173, 0, 0.2);
+    border-color: #06ad00;
+    box-shadow: 0 0 10px #D4A72C;
+    transform: translateY(-2px);
+}
         /* =====================================================
            MOBILE MENU BUTTON
         ===================================================== */
@@ -2737,7 +2721,8 @@
                 border:
                     1px solid
                     rgba(212,167,44,0.4);
-
+text-decoration: none;
+color: #F5F7F5;
                 border-radius:
                     15px;
 
@@ -3544,43 +3529,17 @@
 
             <nav id="navigator">
 
-                <div class="nav_item">
-                    <a href="#hero">
-                        Home
-                    </a>
-                </div>
+    <a href="#hero" class="nav_item">HOME</a>
 
-                <div class="nav_item">
-                    <a href="#about">
-                        About
-                    </a>
-                </div>
+    <a href="#about" class="nav_item">ABOUT</a>
 
-                <div class="nav_item">
-                    <a href="#service">
-                        Services
-                    </a>
-                </div>
+    <a href="#service" class="nav_item">SERVICES</a>
 
-                <div class="nav_item">
-                    <a href="#whyus">
-                        Why Us
-                    </a>
-                </div>
+    <a href="#whyus" class="nav_item">WHY US</a>
 
-                <div class="nav_item">
-                    <a href="#gallery">
-                        Gallery
-                    </a>
-                </div>
+    <a href="#contactus" class="nav_item">CONTACT</a>
 
-                <div class="nav_item">
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </div>
-
-            </nav>
+</nav>
 
         </header>
 
