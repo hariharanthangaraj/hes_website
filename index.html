@@ -22,7 +22,6 @@
 
     <!-- =====================================================
          GOOGLE FONT
-         (trimmed to weights actually used: 700, 800, 900)
     ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +33,7 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
@@ -321,7 +320,7 @@
                 0 0 30px rgba(255,255,255,0.1);
 
             animation:
-                reveal 0.3s
+                reveal 1s
                 cubic-bezier(
                     0.16,
                     1,
@@ -964,8 +963,6 @@
 
         /* =====================================================
            GALLERY ARROWS
-           (backdrop-filter removed - was expensive with little
-           visible benefit on small circular buttons)
         ===================================================== */
 
         .gallery_arrow {
@@ -1002,7 +999,13 @@
                 50%;
 
             background:
-                rgba(2,26,19,0.92);
+                rgba(2,26,19,0.85);
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
 
             color:
                 #D4A72C;
@@ -1467,6 +1470,9 @@
             text-align:
                 center;
 
+            backdrop-filter:
+                blur(15px);
+
             box-shadow:
                 0 0 20px
                 rgba(212,167,44,0.15);
@@ -1650,8 +1656,6 @@
 
         /* =====================================================
            CONTACT GRID
-           (backdrop-filter removed from cards - kept the visual
-           via a slightly more opaque background instead)
         ===================================================== */
 
         .contact_grid {
@@ -1682,7 +1686,7 @@
                 30px;
 
             background:
-                rgba(3,58,42,0.92);
+                rgba(2,50,36,0.72);
 
             border:
                 1px solid
@@ -1690,6 +1694,9 @@
 
             border-radius:
                 20px;
+
+            backdrop-filter:
+                blur(20px);
 
             transition:
                 0.4s ease;
@@ -2690,10 +2697,10 @@
                     flex;
             }
 
-            #whyus {
-                min-height:
-                    550px;
-            }
+#whyus {
+            min-height:
+                550px;
+        }
 
             #navigator {
 
@@ -3350,16 +3357,16 @@
             }
 
 
-            #topcard {
+#topcard {
 
                 top:
                     20%;
             }
 
-            #whyus {
-                min-height:
-                    250px;
-            }
+#whyus {
+            min-height:
+                250px;
+        }
 
             #bottomcard {
 
@@ -3423,7 +3430,7 @@
                     9px;
             }
 
-            #topcard {
+#topcard {
 
                 top:
                     30%;
@@ -3444,10 +3451,10 @@
                     85vw;
             }
 
-            #whyus {
-                min-height:
-                    350px;
-            }
+#whyus {
+            min-height:
+                350px;
+        }
 
             .circle1 {
 
@@ -3893,7 +3900,6 @@
             src="Screenshot 2026-08-25 220152.png"
             id="whyuscenter"
             alt="Why Choose HES"
-            loading="lazy"
         >
 
 
@@ -3968,9 +3974,6 @@
 
 <!-- =====================================================
      GALLERY
-     (deduped one repeated image; all but the first image
-     now lazy-load so the browser doesn't fetch all 16
-     photos on page load)
 ===================================================== -->
 
 <section id="gallery">
@@ -3983,70 +3986,61 @@
     <div id="photos">
 
         <img
-            class="images active"
+            class="images"
             src="WhatsApp Image 2026-08-18 at 9.00.51 PM.jpeg"
             alt="HES Engineering Work 1"
-            loading="eager"
-            fetchpriority="high"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-22 at 11.05.23 PM.jpeg"
             alt="HES Engineering Work 2"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-22 at 11.18.09 PM.jpeg"
             alt="HES Engineering Work 3"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-27 at 12.21.29 AM.jpeg"
             alt="HES Engineering Work 4"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-18 at 9.05.26 PM.jpeg"
             alt="HES Engineering Work 5"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-18 at 8.54.36 PM.jpeg"
             alt="HES Engineering Work 6"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-18 at 9.05.27 PM.jpeg"
             alt="HES Engineering Work 7"
-            loading="lazy"
         >
 
         <img
             class="images"
             src="WhatsApp Image 2026-08-22 at 10.54.08 PM.jpeg"
             alt="HES Engineering Work 8"
-            loading="lazy"
         >
-
-        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM (1).jpeg" alt="HES Engineering Work 9" loading="lazy">
-        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM (2).jpeg" alt="HES Engineering Work 10" loading="lazy">
-        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM.jpeg" alt="HES Engineering Work 11" loading="lazy">
-        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.18 AM (1).jpeg" alt="HES Engineering Work 12" loading="lazy">
-        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.18 AM.jpeg" alt="HES Engineering Work 13" loading="lazy">
-
-        <img class="images" src="img1.jpeg" alt="HES Engineering Work 14" loading="lazy">
-        <img class="images" src="img2.jpeg" alt="HES Engineering Work 15" loading="lazy">
+        <img class="images"  src="WhatsApp Image 2026-08-27 at 12.21.29 AM.jpeg" alt="">
+        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM (1).jpeg" alt="">
+        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM (2).jpeg" alt="">
+        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.17 AM.jpeg" alt="">
+        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.18 AM (1).jpeg" alt="">
+        <img class="images" src="WhatsApp Image 2026-08-27 at 8.34.18 AM.jpeg" alt="">
+        
+        <img class="images" src="img1.jpeg" alt="">
+        <img class="images" src="img2.jpeg" alt="">
 
     </div>
 
