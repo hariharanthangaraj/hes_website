@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hanusengineeringsolution.netlify.app/sitemap.xml
